@@ -1,0 +1,424 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pintureria Norte</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind Configuration and page behavior -->
+    <script src="script.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans text-slate-800 bg-slate-50 antialiased selection:bg-brand-600 selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-slate-900 text-white text-xs py-2 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left">
+            <div class="flex items-center gap-3">
+                <span><i class="fa-solid fa-location-dot text-brand-500 me-1"></i> Mitre y Pizarro N° 598</span>
+               
+                <span class="hidden md:inline"><i class="fa-solid fa-user-check text-brand-500 me-1"></i> Jorge Monteros</span>
+            </div>
+            <div class="flex items-center gap-4 font-semibold">
+                <a href="tel:3878673072" class="hover:text-brand-400 transition-colors"><i class="fa-solid fa-phone me-1 text-brand-500"></i> 3878-673072</a>
+                <span class="text-emerald-400 flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Abierto Hoy</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                
+                <!-- Logo Identidad -->
+                <a href="#inicio" class="flex items-center group" aria-label="Pinturer?a Norte, inicio">
+                    <img src="fotos/logo-pintureria-norte.svg" alt="Pinturer?a Norte ? Pintura hogar, obra y automotriz" class="w-36 sm:w-44 h-auto max-h-12 object-contain group-hover:scale-[1.02] transition-transform">
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center gap-6 font-semibold text-slate-600 text-xs tracking-wider uppercase">
+                    <a href="#inicio" class="hover:text-brand-600 transition-colors">Inicio</a>
+                    <a href="#marcas" class="hover:text-brand-600 transition-colors">Marcas</a>
+                    <a href="#fotos-local" class="hover:text-brand-600 transition-colors">Fotos</a>
+                    <a href="#categorias" class="hover:text-brand-600 transition-colors">Categorias</a>
+                    <a href="#calculadora" class="hover:text-brand-600 transition-colors">Calculadora</a>
+                    <a href="#contacto" class="hover:text-brand-600 transition-colors">Ubicación & Horarios</a>
+                </nav>
+
+                <!-- Header Action CTA Button -->
+                <div class="hidden sm:flex items-center">
+                    <a href="https://wa.me/5493878673072?text=Hola!%20Consulta%20desde%20la%20pagina%20web" target="_blank" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow transition-all">
+                        <i class="fa-brands fa-whatsapp text-sm"></i>
+                        <span>Presupuesto WhatsApp</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#inicio" class="block py-2 text-slate-700 font-medium hover:text-brand-600">Inicio</a>
+            <a href="#marcas" class="block py-2 text-slate-700 font-medium hover:text-brand-600">Marcas</a>
+            <a href="#fotos-local" class="block py-2 text-slate-700 font-medium hover:text-brand-600">Fotos del local</a>
+            <a href="#categorias" class="block py-2 text-slate-700 font-medium hover:text-brand-600">Categorías</a>
+            <a href="#calculadora" class="block py-2 text-slate-700 font-medium hover:text-brand-600">Calculadora de Litros</a>
+            <a href="#contacto" class="block py-2 text-slate-700 font-medium hover:text-brand-600">Ubicación & Horarios</a>
+            <a href="https://wa.me/5493878673072?text=Hola!%20Consulta%20desde%20la%20pagina%20web" target="_blank" class="flex justify-center items-center gap-2 bg-emerald-600 text-white font-bold py-3 rounded-xl w-full text-xs">
+                <i class="fa-brands fa-whatsapp text-base"></i>
+                <span>WhatsApp Jorge Monteros</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative overflow-hidden pt-10 pb-16 lg:pt-16 lg:pb-24 bg-gradient-to-b from-slate-100 to-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                
+                <!-- Hero Content Left -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 border border-brand-200 text-brand-700 font-bold text-xs">
+                        <i class="fa-solid fa-certificate text-brand-600"></i>
+                        <span>Primeras Marcas y Asesoramiento Especializado</span>
+                    </div>
+
+                    <h1 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+                        Todo para tus proyectos de Pintura: <span class="gradient-text">Hogar, Obra y Automotriz</span>
+                    </h1>
+
+                    <p class="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Contamos con el catalogo mas completo de pinturas, barnices, masillas, lijas al agua y revestimientos plasticos. Encontrá el color y la calidad exacta para cada tipo de obra.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 pt-2">
+                        <a href="https://wa.me/5493878673072?text=Hola%20Jorge,%20quiero%20solicitar%20un%20presupuesto" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-extrabold text-sm px-6 py-3.5 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Solicitar Presupuesto</span>
+                        </a>
+                        <a href="#calculadora" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-100 text-slate-800 font-bold text-sm px-5 py-3.5 rounded-xl border border-slate-300 shadow-sm transition-all">
+                            <i class="fa-solid fa-calculator text-brand-600"></i>
+                            <span>Calcular Litros</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Visual Banner Right -->
+                <div class="lg:col-span-5">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="relative min-h-[340px] rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-slate-900 text-white text-center flex items-end">
+                            <img src="fotos/fachada-esquina.jpeg" alt="Fachada de Pinturer&#237;a Norte" class="absolute inset-0 w-full h-full object-cover" loading="eager" fetchpriority="high">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/20 to-transparent"></div>
+                            <div class="relative z-10 w-full p-6">
+                            <div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-brand-600 flex items-center justify-center text-3xl font-black shadow-md">
+                                <i class="fa-solid fa-paint-roller"></i>
+                            </div>
+                            <h3 class="text-2xl font-black font-heading">PINTURERIA NORTE</h3>
+                            <p class="text-xs text-slate-300 mt-1 font-semibold uppercase tracking-wider">Hogar  Obra  Automotriz</p>
+                            
+                            <div class="mt-6 pt-4 border-t border-slate-800 grid grid-cols-2 gap-3 text-left text-xs">
+                                <div class="bg-slate-800/80 p-3 rounded-xl border border-slate-700">
+                                    <span class="text-slate-400 block text-[10px]">Ubicación:</span>
+                                    <span class="font-bold text-white">Mitre y Pizarro 598</span>
+                                </div>
+                                <div class="bg-slate-800/80 p-3 rounded-xl border border-slate-700">
+                                    <span class="text-slate-400 block text-[10px]">Contacto:</span>
+                                    <span class="font-bold text-emerald-400">3878-673072</span>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Real photos of the shop -->
+    <section id="fotos-local" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-brand-600 font-extrabold text-xs uppercase tracking-widest bg-brand-50 px-3 py-1 rounded-full border border-brand-200">Fotos reales</span>
+                <h2 class="font-heading font-black text-3xl text-slate-900 mt-3">Conoc&#233; Pinturer&#237;a Norte</h2>
+                <p class="text-sm text-slate-600 mt-2">Nuestro local, el equipo y la variedad de productos que tenemos para tus proyectos.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <figure class="group overflow-hidden rounded-xl bg-slate-100 shadow-sm">
+                    <img src="fotos/fachada-esquina.jpeg" alt="Frente de Pinturer&#237;a Norte en la esquina" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                    <figcaption class="p-3 text-sm font-semibold text-slate-700">Nuestra fachada</figcaption>
+                </figure>
+                <figure class="group overflow-hidden rounded-xl bg-slate-100 shadow-sm">
+                    <img src="fotos/fachada-frontal.jpeg" alt="Vista frontal del local Pinturer&#237;a Norte" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                    <figcaption class="p-3 text-sm font-semibold text-slate-700">Te esperamos en Orán</figcaption>
+                </figure>
+                <figure class="group overflow-hidden rounded-xl bg-slate-100 shadow-sm">
+                    <img src="fotos/interior-general.jpeg" alt="Vista amplia del interior y los productos" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                    <figcaption class="p-3 text-sm font-semibold text-slate-700">Variedad para cada proyecto</figcaption>
+                </figure>
+                <figure class="group overflow-hidden rounded-xl bg-slate-100 shadow-sm">
+                    <img src="fotos/estanterias-tersuave.jpeg" alt="Estanter&#237;as con pinturas y productos Tersuave" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                    <figcaption class="p-3 text-sm font-semibold text-slate-700">Marcas que conoc&#233;s</figcaption>
+                </figure>
+                <figure class="group overflow-hidden rounded-xl bg-slate-100 shadow-sm">
+                    <img src="fotos/sector-accesorios.jpeg" alt="Pinturas y accesorios disponibles en el local" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                    <figcaption class="p-3 text-sm font-semibold text-slate-700">Pinturas y accesorios</figcaption>
+                </figure>
+                <figure class="group overflow-hidden rounded-xl bg-slate-100 shadow-sm">
+                    <img src="fotos/interior-entrada-roja.jpeg" alt="Vista del interior del comercio desde la entrada" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                    <figcaption class="p-3 text-sm font-semibold text-slate-700">Conoc&#233; nuestro local</figcaption>
+                </figure>
+                <figure class="group overflow-hidden rounded-xl bg-slate-100 shadow-sm">
+                    <img src="fotos/interior-stock.jpeg" alt="Amplio stock de pinturas en baldes y latas" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                    <figcaption class="p-3 text-sm font-semibold text-slate-700">Stock permanente</figcaption>
+                </figure>
+                <figure class="group overflow-hidden rounded-xl bg-slate-100 shadow-sm">
+                    <img src="fotos/productos-tersuave.jpeg" alt="Productos Tersuave y otras marcas en exhibici&oacute;n" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                    <figcaption class="p-3 text-sm font-semibold text-slate-700">Asesoramiento y productos</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Grid Section -->
+    <section id="marcas" class="py-12 bg-gradient-to-b from-orange-50 to-white border-y border-orange-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 text-center sm:text-left">
+                <div class="flex items-center justify-center w-20 h-20 rounded-2xl bg-white shadow-md border border-orange-100">
+                    <svg viewBox="0 0 100 100" class="w-14 h-14" role="img" aria-label="Tacho de pintura">
+                        <path d="M23 27h54l-6 57H29z" fill="#e85d3f" stroke="#7f3040" stroke-width="4" stroke-linejoin="round"/>
+                        <rect x="20" y="24" width="60" height="11" rx="3" fill="#f4b544" stroke="#7f3040" stroke-width="4"/>
+                        <path d="M31 23c2-18 36-18 38 0" fill="none" stroke="#7f3040" stroke-width="4"/>
+                        <path d="M31 53h38" stroke="#fff5e7" stroke-width="5" stroke-linecap="round"/>
+                        <path d="M39 65h22" stroke="#fff5e7" stroke-width="4" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div>
+                    <p class="text-brand-700 text-[11px] font-extrabold uppercase tracking-[.2em]">Color, calidad y variedad</p>
+                    <h2 class="font-heading font-black text-2xl sm:text-3xl text-slate-900 mt-1">Marcas que encontr&aacute;s ac&aacute;</h2>
+                    <p class="text-sm text-slate-600 mt-1">Eleg&iacute; una marca para ver fotos del stock y consultar disponibilidad.</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 text-center">
+                <button type="button" data-brand="Tersuave" aria-haspopup="dialog" class="group overflow-hidden rounded-xl border border-orange-100 bg-white p-2 text-center shadow-sm hover:-translate-y-1 hover:shadow-md focus:ring-2 focus:ring-brand-500 transition"><img src="https://dcdn-us.mitiendanube.com/stores/006/416/187/products/logo-copia-39090ca243b890efb517574502287994-1024-1024.webp" alt="Logotipo de Tersuave" class="h-20 w-full rounded-lg bg-white object-contain p-2" loading="lazy"><span class="mt-2 block font-heading text-sm font-black text-slate-800">TERSEN / TERSUAVE</span><span class="mt-1 block text-[10px] font-semibold text-brand-700">Ver productos y detalles</span></button>
+                <button type="button" data-brand="Terplast" aria-haspopup="dialog" class="group overflow-hidden rounded-xl border border-orange-100 bg-white p-2 text-center shadow-sm hover:-translate-y-1 hover:shadow-md focus:ring-2 focus:ring-brand-500 transition"><img src="https://dcdn-us.mitiendanube.com/stores/003/915/668/products/1-40993e410567742bf517290290376562-1024-1024.webp" alt="Balde de revestimiento acrílico Tersuave Terplast" class="h-20 w-full rounded-lg bg-white object-contain p-1" loading="lazy"><span class="mt-2 block font-heading text-sm font-black text-slate-800">TERPLAST</span><span class="mt-1 block text-[10px] font-semibold text-brand-700">Ver productos y detalles</span></button>
+                <button type="button" data-brand="Polacrin" aria-haspopup="dialog" class="group overflow-hidden rounded-xl border border-orange-100 bg-white p-2 text-center shadow-sm hover:-translate-y-1 hover:shadow-md focus:ring-2 focus:ring-brand-500 transition"><img src="https://polacrin.com.ar/images/polacrin-home-productos-banner-2.png" alt="Producto de pintura Polacrin" class="h-20 w-full rounded-lg bg-white object-contain p-1" loading="lazy"><span class="mt-2 block font-heading text-sm font-black text-slate-800">POLACRIN</span><span class="mt-1 block text-[10px] font-semibold text-brand-700">Ver productos y detalles</span></button>
+                <button type="button" data-brand="Casablanca" aria-haspopup="dialog" class="group overflow-hidden rounded-xl border border-orange-100 bg-white p-2 text-center shadow-sm hover:-translate-y-1 hover:shadow-md focus:ring-2 focus:ring-brand-500 transition"><img src="https://www.sibaco.com/archivos/website/productos/1379/principal.jpg" alt="Balde de látex Casablanca Pro" class="h-20 w-full rounded-lg bg-white object-contain p-1" loading="lazy"><span class="mt-2 block font-heading text-sm font-black text-slate-800">CASABLANCA</span><span class="mt-1 block text-[10px] font-semibold text-brand-700">Ver productos y detalles</span></button>
+                <button type="button" data-brand="Doble A" aria-haspopup="dialog" class="group overflow-hidden rounded-xl border border-orange-100 bg-white p-2 text-center shadow-sm hover:-translate-y-1 hover:shadow-md focus:ring-2 focus:ring-brand-500 transition"><img src="https://www.doble-a.com.ar/sites/weblite-doble-a/files/logo-doble-a-para-fondo-blanco_1_1.png" alt="Logotipo de Doble A Abrasivos" class="h-20 w-full rounded-lg bg-white object-contain p-2" loading="lazy"><span class="mt-2 block font-heading text-sm font-black text-slate-800">DOBLE A</span><span class="mt-1 block text-[10px] font-semibold text-brand-700">Ver productos y detalles</span></button>
+                <button type="button" data-brand="Petrilac" aria-haspopup="dialog" class="group overflow-hidden rounded-xl border border-orange-100 bg-white p-2 text-center shadow-sm hover:-translate-y-1 hover:shadow-md focus:ring-2 focus:ring-brand-500 transition"><img src="https://dcdn-us.mitiendanube.com/stores/006/416/187/products/d_924503-mla69820348866_062023-b-9cfa03254ced79f90917515193001882-1024-1024.webp" alt="Producto de la marca Petrilac" class="h-20 w-full rounded-lg bg-white object-contain p-1" loading="lazy"><span class="mt-2 block font-heading text-sm font-black text-slate-800">PETRILAC</span><span class="mt-1 block text-[10px] font-semibold text-brand-700">Ver productos y detalles</span></button>
+                <button type="button" data-brand="Danzke" aria-haspopup="dialog" class="group overflow-hidden rounded-xl border border-orange-100 bg-white p-2 text-center shadow-sm hover:-translate-y-1 hover:shadow-md focus:ring-2 focus:ring-brand-500 transition"><img src="https://petrilac.com/storage/sliders/L5yhjNp492zhhqrIM6GzxFQcpxN7DMkh9dsUmldC.png" alt="Lata de protector para madera Danzke" class="h-20 w-full rounded-lg bg-white object-contain p-1" loading="lazy"><span class="mt-2 block font-heading text-sm font-black text-slate-800">DANZKE</span><span class="mt-1 block text-[10px] font-semibold text-brand-700">Ver productos y detalles</span></button>
+                <button type="button" data-brand="Sorbalok" aria-haspopup="dialog" class="group overflow-hidden rounded-xl border border-orange-100 bg-white p-2 text-center shadow-sm hover:-translate-y-1 hover:shadow-md focus:ring-2 focus:ring-brand-500 transition"><img src="https://www.ropelato.com.ar/4256-large_default/sorbalok-esmalte-negro-satinado-x-litro.jpg" alt="Lata de esmalte Sorbalok" class="h-20 w-full rounded-lg bg-white object-contain p-1" loading="lazy"><span class="mt-2 block font-heading text-sm font-black text-slate-800">SORBALOK</span><span class="mt-1 block text-[10px] font-semibold text-brand-700">Ver productos y detalles</span></button>
+                <button type="button" data-brand="Sorbacryl" aria-haspopup="dialog" class="group overflow-hidden rounded-xl border border-orange-100 bg-white p-2 text-center shadow-sm hover:-translate-y-1 hover:shadow-md focus:ring-2 focus:ring-brand-500 transition"><img src="https://www.ropelato.com.ar/4440-large_default/sorbalok-latex-frente-blanco-x-1-litro.jpg" alt="Producto acrílico de la línea Sorbalok" class="h-20 w-full rounded-lg bg-white object-contain p-1" loading="lazy"><span class="mt-2 block font-heading text-sm font-black text-slate-800">SORBACRYL</span><span class="mt-1 block text-[10px] font-semibold text-brand-700">Ver productos y detalles</span></button>
+                <button type="button" data-brand="Zeocar" aria-haspopup="dialog" class="group overflow-hidden rounded-xl border border-orange-100 bg-white p-2 text-center shadow-sm hover:-translate-y-1 hover:shadow-md focus:ring-2 focus:ring-brand-500 transition"><img src="https://www.comercialaries.com.ar/mods/html/fil/Model/Category/708/api-web-57.jpg_1744445411373.webp" alt="Logotipo de pinturas Zeocar" class="h-20 w-full rounded-lg bg-white object-contain p-2" loading="lazy"><span class="mt-2 block font-heading text-sm font-black text-slate-800">ZEOCAR</span><span class="mt-1 block text-[10px] font-semibold text-brand-700">Ver productos y detalles</span></button>
+                <button type="button" data-brand="Sikkens" aria-haspopup="dialog" class="group overflow-hidden rounded-xl border border-orange-100 bg-white p-2 text-center shadow-sm hover:-translate-y-1 hover:shadow-md focus:ring-2 focus:ring-brand-500 transition"><img src="https://images.seeklogo.com/logo-png/12/1/sikkens-logo-png_seeklogo-126555.png" alt="Logotipo de Sikkens" class="h-20 w-full rounded-lg bg-white object-contain p-2" loading="lazy" onerror="this.onerror=null;this.src='https://w7.pngwing.com/pngs/453/827/png-transparent-sikkens-hd-logo.png'"><span class="mt-2 block font-heading text-sm font-black text-slate-800">SIKKENS</span><span class="mt-1 block text-[10px] font-semibold text-brand-700">Ver productos y detalles</span></button>
+                <button type="button" data-brand="Wanda" aria-haspopup="dialog" class="group overflow-hidden rounded-xl border border-orange-100 bg-white p-2 text-center shadow-sm hover:-translate-y-1 hover:shadow-md focus:ring-2 focus:ring-brand-500 transition"><img src="https://www.nordestetintas.com.br/imgs/82cdcbd56d854816dd5e335c5d9cfee9.png" alt="Lata de pintura automotriz Wanda" class="h-20 w-full rounded-lg bg-white object-contain p-1" loading="lazy"><span class="mt-2 block font-heading text-sm font-black text-slate-800">WANDA</span><span class="mt-1 block text-[10px] font-semibold text-brand-700">Ver productos y detalles</span></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual product categories -->
+    <section id="categorias" class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-brand-600 font-extrabold text-xs uppercase tracking-widest bg-brand-50 px-3 py-1 rounded-full border border-brand-200">Nuestros rubros</span>
+                <h2 class="font-heading font-black text-3xl text-slate-900 mt-2">Categor&iacute;as especializadas</h2>
+                <p class="text-sm text-slate-600 mt-2">Toc&aacute; una tarjeta para ver una referencia del trabajo y sus productos.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <button type="button" data-category="latex" aria-haspopup="dialog" class="text-left w-full bg-white rounded-xl p-4 border border-slate-200 shadow-sm hover:shadow-lg hover:-translate-y-1 focus:ring-2 focus:ring-brand-500 transition">
+                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Ambiente luminoso con paredes pintadas con l&aacute;tex" class="w-full h-40 object-cover rounded-lg mb-4" loading="lazy">
+                    <span class="w-10 h-10 rounded-lg bg-red-100 text-brand-600 flex items-center justify-center text-xl mb-3"><i class="fa-solid fa-house"></i></span>
+                    <h3 class="font-bold text-slate-900 text-lg mb-1">L&aacute;tex interior / exterior</h3>
+                    <p class="text-slate-600 text-xs">Paredes renovadas con acabados mate y satinado. Toc&aacute; para ver.</p>
+                </button>
+                <button type="button" data-category="barnices" aria-haspopup="dialog" class="text-left w-full bg-white rounded-xl p-4 border border-slate-200 shadow-sm hover:shadow-lg hover:-translate-y-1 focus:ring-2 focus:ring-brand-500 transition">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Muebles y superficies de madera con terminaci&oacute;n protegida" class="w-full h-40 object-cover rounded-lg mb-4" loading="lazy">
+                    <span class="w-10 h-10 rounded-lg bg-orange-100 text-brand-accent flex items-center justify-center text-xl mb-3"><i class="fa-solid fa-building"></i></span>
+                    <h3 class="font-bold text-slate-900 text-lg mb-1">Sint&eacute;ticos y barnices</h3>
+                    <p class="text-slate-600 text-xs">Madera y metal con protecci&oacute;n y terminaci&oacute;n. Toc&aacute; para ver.</p>
+                </button>
+                <button type="button" data-category="automotriz" aria-haspopup="dialog" class="text-left w-full bg-white rounded-xl p-4 border border-slate-200 shadow-sm hover:shadow-lg hover:-translate-y-1 focus:ring-2 focus:ring-brand-500 transition">
+                    <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=800&q=80" alt="Autom&oacute;vil con acabado brillante" class="w-full h-40 object-cover rounded-lg mb-4" loading="lazy">
+                    <span class="w-10 h-10 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-xl mb-3"><i class="fa-solid fa-car"></i></span>
+                    <h3 class="font-bold text-slate-900 text-lg mb-1">L&iacute;nea automotriz</h3>
+                    <p class="text-slate-600 text-xs">Terminaciones para el cuidado y repintado automotor. Toc&aacute; para ver.</p>
+                </button>
+                <button type="button" data-category="accesorios" aria-haspopup="dialog" class="text-left w-full bg-white rounded-xl p-4 border border-slate-200 shadow-sm hover:shadow-lg hover:-translate-y-1 focus:ring-2 focus:ring-brand-500 transition">
+                    <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=800&q=80" alt="Persona pintando una pared con rodillo" class="w-full h-40 object-cover rounded-lg mb-4" loading="lazy">
+                    <span class="w-10 h-10 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center text-xl mb-3"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+                    <h3 class="font-bold text-slate-900 text-lg mb-1">Abrasivos y accesorios</h3>
+                    <p class="text-slate-600 text-xs">Herramientas y accesorios para preparar y pintar. Toc&aacute; para ver.</p>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detail dialog for brands and categories -->
+    <div id="detailModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-slate-950/75 p-4" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
+        <div class="relative w-full max-w-2xl overflow-hidden rounded-2xl bg-white shadow-2xl">
+            <button id="closeDetailModal" type="button" aria-label="Cerrar" class="absolute right-3 top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/95 text-slate-800 shadow hover:bg-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+            <img id="detailImage" src="fotos/interior-general.jpeg" alt="Productos disponibles en Pintureria Norte" class="h-56 w-full object-cover sm:h-72">
+            <div class="p-6 sm:p-8">
+                <span id="detailEyebrow" class="text-brand-700 text-[11px] font-extrabold uppercase tracking-widest">Pinturer&iacute;a Norte</span>
+                <h2 id="detailTitle" class="mt-2 font-heading text-2xl font-black text-slate-900"></h2>
+                <p id="detailDescription" class="mt-3 text-sm leading-relaxed text-slate-600"></p>
+                <a id="detailWhatsApp" href="https://wa.me/5493878673072" target="_blank" rel="noopener" class="mt-6 inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-5 py-3 text-sm font-bold text-white hover:bg-emerald-500"><i class="fa-brands fa-whatsapp"></i> Consultar disponibilidad</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Calculator Section -->
+    <section id="calculadora" class="py-16 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-xl mx-auto text-center mb-8">
+                <span class="text-brand-500 font-extrabold text-xs uppercase tracking-widest bg-slate-800 px-3 py-1 rounded-full border border-slate-700">
+                    Cálculo Directo
+                </span>
+                <h2 class="font-heading font-black text-3xl mt-2 text-white">Calculadora de Litros de Pintura</h2>
+            </div>
+
+            <div class="max-w-xl mx-auto bg-slate-800/90 rounded-2xl p-6 sm:p-8 border border-slate-700 shadow-xl">
+                <form onsubmit="event.preventDefault(); calculatePaint();" class="space-y-4 text-xs">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block font-bold text-slate-300 uppercase mb-1">Ancho Pared (m)</label>
+                            <input type="number" id="wallWidth" step="0.1" placeholder="Ej: 10" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2.5 text-white focus:outline-none focus:border-brand-500">
+                        </div>
+                        <div>
+                            <label class="block font-bold text-slate-300 uppercase mb-1">Alto Pared (m)</label>
+                            <input type="number" id="wallHeight" step="0.1" placeholder="Ej: 2.6" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2.5 text-white focus:outline-none focus:border-brand-500">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block font-bold text-slate-300 uppercase mb-1">Cantidad de Manos</label>
+                        <select id="paintCoats" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2.5 text-white focus:outline-none focus:border-brand-500">
+                            <option value="2">2 Manos (Recomendado estándar)</option>
+                            <option value="1">1 Mano (Retoque)</option>
+                            <option value="3">3 Manos (Superficie no tratada)</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="w-full bg-brand-600 hover:bg-brand-500 text-white font-extrabold py-3 rounded-lg shadow text-sm transition-colors">
+                        Calcular Litros Necesarios
+                    </button>
+                </form>
+
+                <div id="calcResult" class="hidden mt-6 p-4 rounded-xl bg-slate-900 border border-brand-500/40 text-center space-y-2">
+                    <span class="text-[11px] font-bold text-brand-400 uppercase tracking-wider">Litros Estimados Requeridos:</span>
+                    <div class="text-3xl font-black text-white font-heading" id="litersOutput">0 L</div>
+                    <a id="calcWhatsappLink" href="#" target="_blank" class="inline-flex items-center gap-1.5 bg-emerald-600 text-white font-bold text-xs px-4 py-2 rounded-lg hover:bg-emerald-500 transition-colors mt-2">
+                        <i class="fa-brands fa-whatsapp text-sm"></i> Pedir Presupuesto por este volumen
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hours & Location Section -->
+    <section id="contacto" class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                
+                <!-- Hours -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-4">
+                    <div class="flex items-center gap-3 border-b border-slate-100 pb-3">
+                        <div class="w-9 h-9 rounded-lg bg-brand-100 text-brand-600 flex items-center justify-center text-lg">
+                            <i class="fa-regular fa-clock"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-base">Horarios de Atención</h3>
+                            <p class="text-xs text-slate-500">Mitre y Pizarro Nº 598</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3 text-xs text-slate-700">
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-slate-900">Lunes a Viernes:</span>
+                            <div class="text-right">
+                                <span class="block font-medium">Maañana: 8:30 a 13:00 hs</span>
+                                <span class="block font-medium">Tarde: 16:00 a 20:00 hs</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center border-t border-slate-100 pt-2">
+                            <span class="font-bold text-slate-900">Sabados:</span>
+                            <span class="font-medium">9:00 a 13:00 hs (Solo Maañana)</span>
+                        </div>
+                        <div class="flex justify-between items-center border-t border-slate-100 pt-2 text-rose-600">
+                            <span class="font-bold">Domingos:</span>
+                            <span class="font-bold">Cerrado</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-2 border-t border-slate-100 text-xs">
+                        <p class="font-semibold text-slate-900">Contacto Principal:</p>
+                        <p class="text-slate-600">Jorge Monteros - Tel: <a href="tel:3878673072" class="text-brand-600 font-bold hover:underline">3878-673072</a></p>
+                    </div>
+                </div>
+
+                <!-- Location Pin Card -->
+                <div class="bg-slate-900 text-white rounded-2xl p-6 shadow-md flex flex-col justify-between min-h-[250px]">
+                    <div>
+                        <div class="flex items-center gap-2 text-brand-500 font-bold text-xs uppercase mb-2">
+                            <i class="fa-solid fa-map-pin"></i> Ubicación del Local
+                        </div>
+                        <h3 class="text-2xl font-black font-heading">PINTURERiA NORTE</h3>
+                        <p class="text-sm text-slate-300 mt-1">Mitre y Pizarro Nº 598</p>
+                        <p class="text-xs text-slate-400 mt-3 leading-relaxed">
+                            Atención al cliente personalizada, asesoramiento técnico en obra y entrega directa.
+                        </p>
+                    </div>
+
+                    <div class="pt-6">
+                        <a href="https://maps.google.com/?q=Mitre+y+Pizarro+598" target="_blank" class="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-500 text-white font-bold text-xs px-5 py-3 rounded-xl transition-colors">
+                            <i class="fa-solid fa-directions text-sm"></i> Abrir en Google Maps
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-8 border-t border-slate-800 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div>
+                <p class="font-bold text-white">PINTURERIA NORTE  Hogar  Obra  Automotriz</p>
+                <p class="text-[11px] text-slate-500 mt-0.5">Mitre y Pizarro Nº 598 | Jorge Monteros - Tel: 3878-673072</p>
+            </div>
+            <p class="text-slate-500 text-[11px] text-center sm:text-right">
+                Trabajo Practico - Practicas Profesionalizante III IES N° 6031.
+                CARDOZO CARLOS GABRIEL
+            </p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5493878673072?text=Hola!%20Consulta%20desde%20la%20pagina%20web" target="_blank" class="fixed bottom-5 right-5 z-50 bg-emerald-500 text-white w-12 h-12 rounded-full flex items-center justify-center text-2xl shadow-xl hover:bg-emerald-400 hover:scale-105 transition-all" title="WhatsApp Jorge Monteros">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    
+</body>
+</html>
+
+
+
